@@ -1,0 +1,14 @@
+﻿{
+"gridEditors": [
+    {
+        "name": "Grid Content Picker",
+        "alias": "GridContentPicker",
+        "view": "/App_Plugins/GridContentPicker/Editors/Views/GridContentPicker.html",
+        "render": "/App_Plugins/GridContentPicker/Editors/Render/GridContentPicker.cshtml",
+        "icon": "icon-split"
+    }
+  ],
+		javascript: [
+			"~/App_Plugins/GridContentPicker/Editors/Controllers/GridContentPicker.Controllers.js"
+		]
+}

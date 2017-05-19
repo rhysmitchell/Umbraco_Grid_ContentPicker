@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@using Umbraco.Core.Models;
+
+@if (Model.value != null)
+{
+    List<int> ids = new List<int>();
+    foreach (var page in Model.value)
+    {
+        ids.Add(Convert.ToInt32(page.id));
+    }
+
+    IEnumerable<IPublishedContent> pages = Umbraco.TypedContent(ids.ToArray());
+
+    foreach (var page in pages)
+    {
+        <div class="panel panel-default">
+                <a href="@page.Url">
+                    <div class="panel-heading"><i class="fa fa-angle-right" aria-hidden="true"></i> @page.Name</div>
+            </a>
+        </div>
+    }
+}

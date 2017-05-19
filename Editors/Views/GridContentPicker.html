@@ -1,0 +1,11 @@
+﻿<div ng-controller="GridContentPicker.Controller">
+
+    <div ng-click="setContentId()" >
+        <i class="fa fa-arrow-right"></i>
+        <div ng-id="!control.$inserted" class="help-text">Click to insert services</div><br />
+      
+        <div ng-repeat="node in control.nodes">
+            <a href="#" class="home-links"><span class="icon icon-right-double-arrow" aria-hidden="true"></span> {{node.name}}</a>
+        </div>
+    </div>
+</div>
